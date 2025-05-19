@@ -54,7 +54,7 @@ ORDER BY
 LIMIT 25;
 
 /*
-Insights: Optimal Skills for Remote Data Scientist Roles (2025)
+Optimal Skills for Remote Data Scientist Roles:
 
 - Python leads in demand (763 postings, $143,828 avg), confirming its central role in data science.
 - Machine learning frameworks like TensorFlow, PyTorch, and Scikit-learn combine high demand with strong salaries (above $148K).
