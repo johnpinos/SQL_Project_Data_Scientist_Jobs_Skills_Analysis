@@ -24,7 +24,6 @@ SELECT
 FROM
     march_jobs;
 
-
 -- UNION ALL
 -- Combine job title, company ID, and job location from January, February, and March jobs
 -- Includes all rows, including duplicates
