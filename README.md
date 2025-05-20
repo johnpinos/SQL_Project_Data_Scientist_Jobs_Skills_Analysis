@@ -117,7 +117,7 @@ Below is a breakdown of the most in-demand skills in the top 10 highest-paying d
 - Other relevant skills include Tableau, Pandas, NumPy, Scala, and Kubernetes.
 
 ![Top Paying Skills][assets\2_top_paying_roles_skills.png]
-*Bar graph visualizing the count of skills for the top 10 paying jobs for data analysts; ChatGPT generated this graph from my SQL query results*
+*Bar graph visualizing the count of skills for the top 10 paying jobs for data scientist; ChatGPT generated this graph from my SQL query results*
 
 ### 3. Most In-Demand Skills for Data Scientists
 To identify the most sought-after competencies in the job market, I analyzed all remote Data Scientist job postings. Based on this analysis, I extracted the five most frequent skills, providing insight into which tools and languages have the greatest practical value today.
@@ -174,7 +174,7 @@ GROUP BY
     skills
 ORDER BY
     avg_salary DESC
-LIMIT 25;
+LIMIT 10;
 ```
 Below is a breakdown of the highest-paying skills for data scientists:
 - **Experience in data privacy and compliance:** Skills such as GDPR lead with the highest salaries, reflecting the growing industry demand for knowledge in regulation and data protection.
@@ -239,29 +239,33 @@ INNER JOIN average_salary ON skills_demand.skill_id = average_salary.skill_id
 WHERE  
     demand_count > 10
 ORDER BY
-    avg_salary DESC,
-    demand_count DESC
-LIMIT 25;
+    demand_count DESC,
+    avg_salary DESC
+LIMIT 10;
 ```
 Below is a breakdown of the optimal skills for data scientists that combine high demand and high salary:
 
-- Specialized languages such as C and Go are among the highest-paid, exceeding $164,000 annually, although with lower demand. These skills correspond to more specialized technical roles.
-- Cloud platforms and orchestration tools like Airflow, GCP, Snowflake, and BigQuery stand out both for their salary and popularity, making them solid bets for professional growth.
-- Machine learning tools such as TensorFlow, PyTorch, and Scikit-learn combine high demand with competitive salaries, reflecting their widespread use in the field.
-- Python stands out for its combination of extremely high demand (763 mentions) and competitive salary, consolidating itself as the essential language for any data scientist.
+- **Python** stands out as the most in-demand skill (763 mentions) with a competitive average salary of $143,828, solidifying its status as the essential language in data science.
+- **SQL** also shows very high demand (591 mentions) and a strong average salary of $142,833, making it a key tool for database manipulation.
+- **R** maintains a considerable presence (394 mentions) with a solid average salary of $137,885, proving useful for advanced statistical analysis.
+- **Tableau**, although less in demand (219 mentions), offers an above-average salary ($146,970), making it a valuable tool for data visualization.
+- **AWS and Azure**, the leading cloud platforms, show a combination of good demand (217 and 122 mentions, respectively) and high salaries, especially AWS with an average of $149,630, reflecting its importance in modern data environments.
+- **Spark**, with 149 mentions and an average salary of $150,188, is a well-paid technology focused on processing large volumes of data.
+- **TensorFlow and PyTorch**, two leading machine learning frameworks, combine high salaries ($151,536 and $152,603, respectively) with solid technical demand (126 and 115 mentions), positioning themselves as key tools in predictive model development.
+- **Pandas**, while more modest in demand (113 mentions), offers a competitive salary of $144,816 and is essential for data analysis in Python.
 
-| Skills         | Demand Count | Average Salary ($)    |
-|----------------|--------------|-----------------------|
-| python         | 763          | 143,828               |
-| tableau        | 219          | 146,970               |
-| aws            | 217          | 149,630               |
-| tensorflow     | 126          | 151,536               |
-| pandas         | 113          | 144,816               |
-| pytorch        | 115          | 152,603               |
-| scikit-learn   | 81           | 148,964               |
-| numpy          | 73           | 149,089               |
-| snowflake      | 72           | 152,687               |
-| gcp            | 59           | 155,811               |
+| Skill       | Demand Count | Avg. Salary (USD) |
+|-------------|--------------|-------------------|
+| Python      | 763          | $143,828          |
+| SQL         | 591          | $142,833          |
+| R           | 394          | $137,885          |
+| Tableau     | 219          | $146,970          |
+| AWS         | 217          | $149,630          |
+| Spark       | 149          | $150,188          |
+| TensorFlow  | 126          | $151,536          |
+| Azure       | 122          | $142,306          |
+| PyTorch     | 115          | $152,603          |
+| Pandas      | 113          | $144,816          |
 
 *Table of the most optimal skills for data scientist sorted by salary*
 
@@ -283,9 +287,6 @@ Throughout this project, I strengthened my data analysis skills using SQL, focus
 - 📊 **Grouping and aggregation:** Application of functions like COUNT(), AVG(), ROUND(), and GROUP BY.
 - 🔍 **Applied analytical thinking:** Ability to translate strategic questions into precise SQL queries.
 - 📈 **Data-driven interpretation:** Critical identification of patterns and trends relevant to decision-making.
-
-
-
 
 
 [assets\1_top_paying_roles.png]: assets/1_top_paying_roles.png
